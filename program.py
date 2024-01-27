@@ -21,10 +21,14 @@ unit_label = Label(root, text="Convert to unit", font=font)
 unit_list = ["Fahrenheit", "Kelvin"]
 temp_combo = ttk.Combobox(root, value=unit_list, font=font, width=18)
 temp_combo.set("Kelvin") # Set default value.
-
 unit_label.grid(row=1, column=0, sticky=W)
 temp_combo.grid(row=1, column=1)
+
 #output widget
+output_label = Label(root, text="Result", font=font)
+output_text = Entry(root, width=20, font=font)
+output_label.grid(row=2, column=0, sticky=W)
+output_text.grid(row=2, column=1)
 
 #button widget
 
