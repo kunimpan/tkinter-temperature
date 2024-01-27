@@ -23,6 +23,11 @@ def convert():
         fahrenheit = (celcius_value*1.8)+32
         output_txt.insert(0, fahrenheit)
 
+def reset():
+    output_txt.delete(0, END)
+    input_txt.delete(0, END)
+    temp_combo.set("Kelvin")
+
 #settings
 font = ("Arial", 15, "bold")
 color = "orange"
@@ -49,7 +54,7 @@ output_txt.grid(row=2, column=1)
 
 #button widget
 convertBtn = Button(root, text="Convert", font=font, width=10, bg=color, command=convert)
-resetBtn = Button(root, text="Clear", font=font, width=7, bg=color)
+resetBtn = Button(root, text="Clear", font=font, width=7, bg=color, command=reset)
 convertBtn.grid(row=3, column=1, sticky=W, padx=5, pady=5)
 resetBtn.grid(row=3, column=1, sticky=E, padx=5, pady=5)
 
