@@ -31,5 +31,9 @@ output_label.grid(row=2, column=0, sticky=W)
 output_text.grid(row=2, column=1)
 
 #button widget
+convertBtn = Button(root, text="Convert", font=font, width=10, bg=color)
+resetBtn = Button(root, text="Clear", font=font, width=7, bg=color)
+convertBtn.grid(row=3, column=1, sticky=W, padx=5, pady=5)
+resetBtn.grid(row=3, column=1, sticky=E, padx=5, pady=5)
 
 root.mainloop()
